@@ -1,4 +1,4 @@
 #!/bin/bash
-O(n)
-O(n^2)
-O(n^2)
+Best: O(n)
+Average: O(n^2)
+Worst: O(n^2)\n

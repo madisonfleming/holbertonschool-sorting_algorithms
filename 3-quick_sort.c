@@ -80,9 +80,14 @@ size_t lomuto_partition(int *array, size_t low, size_t high, size_t size)
  */
 void quick_sort_recursion(int *array, size_t low, size_t high, size_t size)
 {
+	size_t pi;
+
 	if (low < high)
 	{
-		size_t pi = lomuto_partition(array, low, high, size);
+		if (all_equal(array, low, high))
+			return;
+
+		pi = lomuto_partition(array, low, high, size);
 
 		if (pi > 0)
 			quick_sort_recursion(array, low, pi - 1, size);

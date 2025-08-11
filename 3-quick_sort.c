@@ -15,6 +15,27 @@ void swap(int *a, int *b)
 }
 
 /**
+ * all_equal - check if all values in subarray are identical
+ * @array: array to check
+ * @low: starting index
+ * @high: ending index
+ * Return: 1 if equal, 0 otherwise
+ */
+int all_equal(int *array, size_t low, size_t high)
+{
+	int first = array[low];
+	size_t i = low + 1;
+
+	while (i <= high)
+	{
+		if (array[i] != first)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+/**
  * lomuto_partition - swap values using lomuto partition
  * @array: the array to partition
  * @low: starting index
